@@ -12,24 +12,10 @@ Exercises
 from turtle import *
 
 from freegames import vector
-def info_alumnos():
-  writer.up()
-  writer.goto(0,190)
-  writer.color('blue')
-  writer write('Name Apellido Paterno Materno Matricula',align='left', font=('Arial", 10, 'normal''))
-  writer.goto(0,170)
-  writer.color('pink')
-  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal"'))
 
 
-
-                                                                                            
 def line(start, end):
-    """Draw line from start to end.
-    start - vector (x,y)
-    end - vector (x,y)
-    uo() - levanta pluma
-    down() - baja pluma"""
+    """Draw line from start to end."""
     up()
     goto(start.x, start.y)
     down()
@@ -79,22 +65,19 @@ def tap(x, y):
 
 
 def store(key, value):
-    """Store value in state at key. Solo se llama cujando se va a modificar el shape"""
+    """Store value in state at key."""
     state[key] = value
 
-# estado inicial del paint - diccionario - start - si el usuario ya dio un click mouse- shape - linea
+
 state = {'start': None, 'shape': line}
-# setup(ancho,alto, x_esq, suo, izq_wind, y_Esq.sup, izq_wind)
 setup(420, 420, 370, 0)
-# registra la funcion que atendera los eventos del mouse
 onscreenclick(tap)
 listen()
-onkey(undo, 'u') # funcion/tecla
+onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('#33FF4F'), 'Z')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
