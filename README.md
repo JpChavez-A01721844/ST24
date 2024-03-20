@@ -12,7 +12,16 @@
 **2. Dibujar un círculo**
 - Bryan Alejandro Cortes
 ```python
-
+def circle(start, end):
+    """Draw circle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    for count in range(20):
+        forward(end.x - start.x)
+        left(18)
+    end_fill()
 ```
 **3. Desplegar los 3 o 4 nombres de los integrantes del equipo, añadiendo la siguiente función**
 - Bryan Alejandro Cortes
@@ -28,8 +37,6 @@
   writer.goto(0,150)
   writer.color('green')
   writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
-
-
 ```
 **4. Completar el rectángulo**
 - Juan Pablo Chavez
