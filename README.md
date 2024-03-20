@@ -69,9 +69,10 @@ def triangle(start, end):
         right(120)
     end_fill()
 ```
-
+---
 6. Modificar el README con la siguiente información :
   - código(md) de las funciones que se añadieron
   - indicando con un titulo el autor
-  - Añadir un gift del funcionamiento del videojuego.
+  - Añadir un gif del funcionamiento del videojuego.
 
+# GIF
