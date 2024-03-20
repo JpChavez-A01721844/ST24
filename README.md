@@ -7,6 +7,20 @@
 **1. Un color nuevo**
 **2. Dibujar un círculo**
 **3. Desplegar los 3 o 4 nombres de los integrantes del equipo, añadiendo la siguiente función**
+- Juan Pablo Chavez
+```python
+  def info_alumnos():
+  writer.up()
+  writer.goto(0,190)
+  writer.color('blue')
+  writer.write('Juan Pablo Chavez A017844',align='left', font=('Arial', 10, 'normal'))
+  writer.goto(0,170)
+  writer.color('black')
+  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+  writer.goto(0,150)
+  writer.color('green')
+  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+```
 **4. Completar el rectángulo**
 - Juan Pablo Chavez
 ```python
