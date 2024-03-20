@@ -13,6 +13,7 @@ from turtle import *
 from freegames import vector
 
 def info_alumnos():
+<<<<<<< Updated upstream
   writer.up()
   writer.goto(0,190)
   writer.color('blue')
@@ -20,6 +21,18 @@ def info_alumnos():
   writer.goto(0,170)
   writer.color('pink')
   writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+=======
+    up()
+    goto(0,190)
+    color('blue')
+    write('Juan Pablo Chavez A017844',align='left', font=('Arial', 10, 'normal'))
+    goto(0,170)
+    color('red')
+    write('Bryan Cortés A01248228',align='left',font=('Arial',10,'normal'))
+    goto(0,150)
+    color('green')
+    write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+>>>>>>> Stashed changes
                                                                                 
 def line(start, end):
     """Draw line from start to end.
@@ -107,10 +120,12 @@ def store(key, value):
     """Store value in state at key. Solo se llama cujando se va a modificar el shape"""
     state[key] = value
 
+
 # estado inicial del paint - diccionario - start - si el usuario ya dio un click mouse- shape - linea
 state = {'start': None, 'shape': line}
 # setup(ancho,alto, x_esq, suo, izq_wind, y_Esq.sup, izq_wind)
 setup(420, 420, 370, 0)
+info_alumnos()
 # registra la funcion que atendera los eventos del mouse
 onscreenclick(tap)
 listen()
