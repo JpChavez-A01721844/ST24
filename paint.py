@@ -19,7 +19,7 @@ def info_alumnos():
   writer.write('Juan Pablo Chavez A017844',align='left', font=('Arial', 10, 'normal'))
   writer.goto(0,170)
   writer.color('black')
-  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+  writer.write('Bryan Cortés A01248228',align='left',font=('Arial',10,'normal'))
   writer.goto(0,150)
   writer.color('green')
   writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
