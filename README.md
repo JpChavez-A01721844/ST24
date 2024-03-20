@@ -5,7 +5,12 @@
 # 2. Funciones
 ---
 **1. Un color nuevo**
+- Juan Pablo Chavez
+```python
+  onkey(lambda: color('orange'), 'O')
+```
 **2. Dibujar un círculo**
+
 **3. Desplegar los 3 o 4 nombres de los integrantes del equipo, añadiendo la siguiente función**
 - Juan Pablo Chavez
 ```python
