@@ -16,9 +16,12 @@ def info_alumnos():
   writer.up()
   writer.goto(0,190)
   writer.color('blue')
-  writer.write('Name Apellido Paterno Materno Matricula',align='left', font=('Arial', 10, 'normal'))
+  writer.write('Juan Pablo Chavez A017844',align='left', font=('Arial', 10, 'normal'))
   writer.goto(0,170)
-  writer.color('pink')
+  writer.color('black')
+  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+  writer.goto(0,150)
+  writer.color('green')
   writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
                                                                                 
 def line(start, end):
