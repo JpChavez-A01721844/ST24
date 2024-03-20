@@ -13,18 +13,6 @@ from turtle import *
 from freegames import vector
 
 def info_alumnos():
-<<<<<<< Updated upstream
-  writer.up()
-  writer.goto(0,190)
-  writer.color('blue')
-  writer.write('Juan Pablo Chavez A017844',align='left', font=('Arial', 10, 'normal'))
-  writer.goto(0,170)
-  writer.color('black')
-  writer.write('Bryan Cortés A01248228',align='left',font=('Arial',10,'normal'))
-  writer.goto(0,150)
-  writer.color('green')
-  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
-=======
     up()
     goto(0,190)
     color('blue')
@@ -35,7 +23,6 @@ def info_alumnos():
     goto(0,150)
     color('green')
     write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
->>>>>>> Stashed changes
                                                                                 
 def line(start, end):
     """Draw line from start to end.
