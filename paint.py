@@ -10,20 +10,17 @@ Exercises
 """
 
 from turtle import *
-
 from freegames import vector
+
 def info_alumnos():
   writer.up()
   writer.goto(0,190)
   writer.color('blue')
-  writer write('Name Apellido Paterno Materno Matricula',align='left', font=('Arial", 10, 'normal''))
+  writer.write('Name Apellido Paterno Materno Matricula',align='left', font=('Arial', 10, 'normal'))
   writer.goto(0,170)
   writer.color('pink')
-  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal"'))
-
-
-
-                                                                                            
+  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
+                                                                                
 def line(start, end):
     """Draw line from start to end.
     start - vector (x,y)
@@ -61,11 +58,11 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
-    for _ in range(2):
+    
+    for count in range(2):
         forward(end.x - start.x)
         left(90)
-        forward(end.y - start.y)
+        forward(end.x - (start.x)*2 )
         left(90)
 
     end_fill()
@@ -77,6 +74,13 @@ def triangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
+
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
+
 
     for _ in range(3):
         goto(end.x, end.y)
