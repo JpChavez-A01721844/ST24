@@ -13,15 +13,6 @@ from turtle import *
 from freegames import vector
 
 def info_alumnos():
-<<<<<<< Updated upstream
-  writer.up()
-  writer.goto(0,190)
-  writer.color('blue')
-  writer.write('Name Apellido Paterno Materno Matricula',align='left', font=('Arial', 10, 'normal'))
-  writer.goto(0,170)
-  writer.color('pink')
-  writer.write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
-=======
     up()
     goto(0,190)
     color('blue')
@@ -32,7 +23,6 @@ def info_alumnos():
     goto(0,150)
     color('green')
     write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
->>>>>>> Stashed changes
                                                                                 
 def line(start, end):
     """Draw line from start to end.
@@ -135,6 +125,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('#33FF4F'), 'Z')
+onkey(lambda: color('orange'), 'O')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
