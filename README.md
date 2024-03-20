@@ -10,9 +10,12 @@
   onkey(lambda: color('orange'), 'O')
 ```
 **2. Dibujar un círculo**
+- Bryan Alejandro Cortes
+```python
 
+```
 **3. Desplegar los 3 o 4 nombres de los integrantes del equipo, añadiendo la siguiente función**
-- Juan Pablo Chavez
+- Bryan Alejandro Cortes
 ```python
   def info_alumnos():
   writer.up()
@@ -43,7 +46,7 @@ def rectangle(start, end):
     end_fill()
 ```
 **5. Completar el triángulo**
-- Juan Pablo Chavez
+- Bryan Alejandro Cortes
 ```python
 def triangle(start, end):
     """Draw triangle from start to end."""
