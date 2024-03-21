@@ -15,8 +15,11 @@ from turtle import *
 from freegames import path
 
 car = path('car.gif')
+#Inicializacion 
 tiles = list(range(32)) * 2
+#Carta destapada
 state = {'mark': None}
+#Carta escondida
 hide = [True] * 64
 
 
