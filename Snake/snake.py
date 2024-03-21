@@ -13,16 +13,35 @@ from turtle import *
 
 from freegames import square, vector
 
+# Overall movement
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+movement = 0
 
+# Colors
 listColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsia', 'gray', 'lime', 'orange']
 listMoveFood = [vector(10,0), vector(-10,0), vector(0,10), vector(0,-10)]
-
 colorSnake = listColors[randrange(0,9)]
 colorFood = listColors[randrange(0,9)]
-movement = 0
+
+writer = Turtle()
+
+def maya():
+    pass
+
+def info_alumnos():
+    color('#F3A1FF')
+    maya()
+    writer.up()
+    writer.goto(-100,190)
+    writer.color('blue')
+    writer.write('Juan Pablo Chavez A017844',align='left', font=('Arial', 10, 'normal'))
+    writer.goto(-100,170)
+    writer.color('red')
+    writer.write('Bryan Cortés A01248228',align='left',font=('Arial',10,'normal'))
+    writer.down()
+    writer.hideturtle()
 
 def change(x, y):
     """Change snake direction."""
@@ -80,6 +99,7 @@ def move():
 
 setup(420, 420, 370, 0)
 title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
+info_alumnos()
 hideturtle()
 tracer(False)
 listen()
