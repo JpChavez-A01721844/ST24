@@ -69,3 +69,5 @@ if head == food:
 ```python
 title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
 ```
+---
+# GIF
