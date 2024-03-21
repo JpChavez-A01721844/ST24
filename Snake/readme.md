@@ -27,7 +27,11 @@ title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
 ```
 6. Cada vez que se corra el juego (play) o que el snake consuma la food, la snake y la food deberán asignarles colores diferentes entre sí (no rojo)
  ```python
-title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
+listOfColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsia', 'gray', 'lime', 'orange']
+colorSnake = listOfColors[randrange(0,9)]
+colorFood = listOfColors[randrange(0,9)]
+
+
 ```  
 8. Cambiar el nombre de la ventana del videojuego con el nombre del equipo
 ```python
