@@ -16,13 +16,14 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-
+listOfColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsia', 'gray', 'lime', 'orange']
+colorSnake = listOfColors[randrange(0,9)]
+colorFood = listOfColors[randrange(0,9)]
 
 def change(x, y):
     """Change snake direction."""
     aim.x = x
     aim.y = y
-
 
 def inside(head):
     """Return True if head inside boundaries."""
@@ -30,6 +31,9 @@ def inside(head):
 
 
 def move():
+    global colorSnake
+    global colorFood
+    
     """Move snake forward one segment."""
     head = snake[-1].copy()
     head.move(aim)
@@ -45,20 +49,26 @@ def move():
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
+        colorSnake = listOfColors[randrange(0,9)]
+        colorFood = listOfColors[randrange(0,9)]
     else:
         snake.pop(0)
 
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, colorSnake)
 
-    square(food.x, food.y, 9, 'green')
+    up()
+    goto(food.x + 5, food.y + 5)
+    dot(10, colorFood)
+
     update()
     ontimer(move, 100)
 
 
 setup(420, 420, 370, 0)
+title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
 hideturtle()
 tracer(False)
 listen()
