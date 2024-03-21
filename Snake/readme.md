@@ -19,3 +19,4 @@ generar una nueva posición del food_aux  - lista_mov_food = [vector(20,0), vect
    
 8. Cambiar el nombre de la ventana del videojuego con el nombre del equipo
 
+title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
