@@ -71,3 +71,4 @@ title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
 ```
 ---
 # GIF
+![](Snake/ezgif-7-d4ef0a7cf7.gif)
