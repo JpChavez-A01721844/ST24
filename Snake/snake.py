@@ -55,9 +55,10 @@ def move():
     for body in snake:
         square(body.x, body.y, 9, currentColor)
 
-    square(food.x, food.y, 9, 'white')
+    up()
+    goto(food.x + 5, food.y + 5)
     dot(10, 'green')
-    
+
     update()
     ontimer(move, 100)
 
