@@ -17,7 +17,8 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 listOfColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsia', 'gray', 'lime', 'orange']
-currentColor = listOfColors[randrange(0,9)]
+colorSnake = listOfColors[randrange(0,9)]
+colorFood = listOfColors[randrange(0,9)]
 
 def change(x, y):
     """Change snake direction."""
@@ -30,6 +31,9 @@ def inside(head):
 
 
 def move():
+    global colorSnake
+    global colorFood
+    
     """Move snake forward one segment."""
     head = snake[-1].copy()
     head.move(aim)
@@ -45,19 +49,19 @@ def move():
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
-        global currentColor
-        currentColor = listOfColors[randrange(0,9)]
+        colorSnake = listOfColors[randrange(0,9)]
+        colorFood = listOfColors[randrange(0,9)]
     else:
         snake.pop(0)
 
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, currentColor)
+        square(body.x, body.y, 9, colorSnake)
 
     up()
     goto(food.x + 5, food.y + 5)
-    dot(10, 'green')
+    dot(10, colorFood)
 
     update()
     ontimer(move, 100)
