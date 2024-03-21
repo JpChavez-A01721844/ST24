@@ -31,7 +31,16 @@ listOfColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsi
 colorSnake = listOfColors[randrange(0,9)]
 colorFood = listOfColors[randrange(0,9)]
 
+if head == food:
+        print('Snake:', len(snake))
+        food.x = randrange(-15, 15) * 10
+        food.y = randrange(-15, 15) * 10
+        colorSnake = listOfColors[randrange(0,9)]
+        colorFood = listOfColors[randrange(0,9)]
+    else:
+        snake.pop(0)
 
+    clear()
 ```  
 8. Cambiar el nombre de la ventana del videojuego con el nombre del equipo
 ```python
