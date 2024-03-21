@@ -19,11 +19,13 @@ title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
 ```
 4. Función para desplegar la información de los integrantes del equipo 
 ```python
-title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
+
 ```
 5. La food debe ser un pequeño circulo
 ```python
-title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
+ up()
+    goto(food.x + 5, food.y + 5)
+    dot(10, colorFood)
 ```
 6. Cada vez que se corra el juego (play) o que el snake consuma la food, la snake y la food deberán asignarles colores diferentes entre sí (no rojo)
  ```python
