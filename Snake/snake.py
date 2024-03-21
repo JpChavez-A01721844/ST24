@@ -16,9 +16,13 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-listOfColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsia', 'gray', 'lime', 'orange']
-colorSnake = listOfColors[randrange(0,9)]
-colorFood = listOfColors[randrange(0,9)]
+
+listColors = ['darkcyan', 'blue', 'green', 'yellow', 'purple', 'cyan', 'fuchsia', 'gray', 'lime', 'orange']
+listMoveFood = [vector(10,0), vector(-10,0), vector(0,10), vector(0,-10)]
+
+colorSnake = listColors[randrange(0,9)]
+colorFood = listColors[randrange(0,9)]
+movement = 0
 
 def change(x, y):
     """Change snake direction."""
@@ -29,14 +33,16 @@ def inside(head):
     """Return True if head inside boundaries."""
     return -200 < head.x < 190 and -200 < head.y < 190
 
-
 def move():
     global colorSnake
     global colorFood
+    global movement
+    global food
     
     """Move snake forward one segment."""
     head = snake[-1].copy()
     head.move(aim)
+    movement = movement + 1
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
@@ -45,12 +51,17 @@ def move():
 
     snake.append(head)
 
+    if movement == 10:
+        food = food - listMoveFood[randrange(0,4)]
+        movement = 0
+
     if head == food:
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
-        colorSnake = listOfColors[randrange(0,9)]
-        colorFood = listOfColors[randrange(0,9)]
+        colorSnake = listColors[randrange(0,9)]
+        colorFood = listColors[randrange(0,9)]
+        movement = 0
     else:
         snake.pop(0)
 
