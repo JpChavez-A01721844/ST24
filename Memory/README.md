@@ -19,6 +19,8 @@
   writer.goto(0,170)
   writer.color('black')
   writer.write('Bryan Cortés A01248228',align='left',font=('Arial',10,'normal'))
+
+title("Equipo 6: Bryan Cortés y Juan Pablo Chavez")
   ```
 3. Detectar si todos los cuadros se han destapado : mostrar un mensaje "Ganaste un auto!!, Felicidades"  y terminar el juego (que no sigan contando los clicks que haga el usuario)
 - Juan Pablo Chavez
