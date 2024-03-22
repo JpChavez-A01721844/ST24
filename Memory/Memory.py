@@ -14,8 +14,12 @@ from turtle import *
 
 from freegames import path
 
+emojis = ['\U0001F950', '\U0001F95E', '\U0001F354', '\U0001F355', '\U0001F32D', '\U0001F32F', '\U0001F9C6', '\U0001F37F', 
+          '\U0001F371', '\U0001F9C0', '\U0001F357', '\U0001F35F', '\U0001F96A', '\U0001F32E', '\U0001F32F', '\U0001F959',
+          '\U0001FAD4', '\U0001F958', '\U0001F372', '\U0001F957', '\U0001F96B', '\U0001F35C', '\U0001F96E', '\U0001F361',
+          '\U0001F961', '\U0001F960', '\U0001F95F', '\U0001F364', '\U0001F363', '\U0001F35D', '\U0001F969', '\U0001F96F']
 car = path('car.gif')
-tiles = list(range(32)) * 2
+tiles = emojis * 2
 state = {'mark': None}
 hide = [True] * 64
 taps = 0
@@ -38,7 +42,7 @@ def square(x, y):
     up()
     goto(x, y)
     down()
-    color('black', 'white')
+    color('black', 'lime')
     begin_fill()
     for count in range(4):
         forward(50)
@@ -104,15 +108,17 @@ def draw():
     update()
 
     if hide.count(True) == 0:
+        lapiz1.up()
         lapiz1.goto(-150, -300)
         lapiz1.color('Green')
         lapiz1.write('Congratulations!', font = ('Arial', 30, 'normal'))
+        lapiz1.down()
         onscreenclick(None)
 
     ontimer(draw, 100)
 
 
-shuffle(tiles)
+#shuffle(tiles)
 setup(620, 620, 370, 0)
 bgcolor('cyan')
 title('Memorama - Juan Pablo Chavez y Bryan Cortés')
