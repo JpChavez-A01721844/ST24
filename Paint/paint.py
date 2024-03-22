@@ -20,9 +20,6 @@ def info_alumnos():
     goto(0,170)
     color('red')
     write('Bryan Cortés A01248228',align='left',font=('Arial',10,'normal'))
-    goto(0,150)
-    color('green')
-    write('NameApellidoPaternoMaternoMatricula',align='left',font=('Arial',10,'normal'))
                                                                                 
 def line(start, end):
     """Draw line from start to end.
