@@ -18,7 +18,20 @@ car = path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
+taps = 0
 
+lapiz1 = Turtle(visible = False)
+writer = Turtle(visible = False)
+
+def info_alumnos():
+    writer.up()
+    writer.goto(-120,250)
+    writer.color('blue')
+    writer.write('Juan Pablo Chavez A017844', align='left', font=('Arial', 14, 'normal'))
+    writer.goto(-120,270)
+    writer.color('magenta')
+    writer.write('Bryan Cortés A01248228', align='left', font=('Arial', 14, 'normal'))
+    writer.down()
 
 def square(x, y):
     """Draw white square with black outline at (x, y)."""
@@ -45,16 +58,27 @@ def xy(count):
 
 def tap(x, y):
     """Update mark and hidden tiles based on tap."""
-    spot = index(x, y)
-    mark = state['mark']
+    global taps
+    
+    if (x >= -200 and x <= 200) and (y >= -200 and y <= 200):
+        taps += 1
+        countTabs()
+        spot = index(x, y)
+        mark = state['mark']
+        if mark is None or mark == spot or tiles[mark] != tiles[spot]:
+            state['mark'] = spot
+        else:
+            hide[spot] = False
+            hide[mark] = False
+            state['mark'] = None
 
-    if mark is None or mark == spot or tiles[mark] != tiles[spot]:
-        state['mark'] = spot
-    else:
-        hide[spot] = False
-        hide[mark] = False
-        state['mark'] = None
-
+def countTabs():
+    lapiz1.clear()
+    lapiz1.up()
+    lapiz1.goto(-50,-250)
+    lapiz1.color('blue')
+    lapiz1.write(f"Taps: {taps}", font = ('Arial', 30, 'normal'))
+    lapiz1.down()
 
 def draw():
     """Draw image and tiles."""
@@ -78,11 +102,21 @@ def draw():
         write(tiles[mark], font=('Arial', 30, 'normal'))
 
     update()
+
+    if hide.count(True) == 0:
+        lapiz1.goto(-150, -300)
+        lapiz1.color('Green')
+        lapiz1.write('Congratulations!', font = ('Arial', 30, 'normal'))
+        onscreenclick(None)
+
     ontimer(draw, 100)
 
 
 shuffle(tiles)
-setup(420, 420, 370, 0)
+setup(620, 620, 370, 0)
+bgcolor('cyan')
+title('Memorama - Juan Pablo Chavez y Bryan Cortés')
+info_alumnos()
 addshape(car)
 hideturtle()
 tracer(False)
