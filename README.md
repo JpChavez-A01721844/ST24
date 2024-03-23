@@ -6,3 +6,4 @@
 ![](equipo)
 # 3. Ligas de videos
 [Bryan Cortés](https://youtu.be/9wG40jIhlVE)
+[Jp Chavez](https://drive.google.com/file/d/1L4bSS1SYt39bjKuOEoCCy1Kx6ANtSecJ/view?usp=sharing)
